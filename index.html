@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My girl</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fceffd; /* light pink background */
+    background-image: url('https://static.vecteezy.com/system/resources/previews/009/389/347/non_2x/seamless-pattern-with-cute-mini-hearts-vector.jpg'); /* small heart pattern background */
+    background-size: cover; /* cover the entire background */
+  }
+  .envelope {
+    position: relative;
+    width: 300px; /* bigger envelope */
+    height: 200px; /* bigger envelope */
+    background-color: #fffce8; /* slightly darker pink */
+    border: 4px solid #ff85a2; /* pinkish red border */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden; /* clip contents that overflow */
+    text-align: center; /* center align text */
+    position: relative; /* ensure z-index works */
+  }
+  .envelope::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 15px 15px 15px;
+    border-style: solid;
+    border-color: transparent transparent #ff85a2 transparent; /* pinkish red */
+  }
+  .heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ff85a2; /* pinkish red heart */
+    font-size: 24px;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .letter {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 260px; /* fit within envelope */
+    height: 140px; /* fit within envelope */
+    background-color: #fff;
+    border: 2px solid #ff85a2; /* pinkish red border */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    overflow-y: auto; /* add scrollbar if content exceeds height */
+  }
+  .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #ff85a2; /* pinkish red */
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 30; /* ensure above the letter */
+  }
+  .initials {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 24px;
+    color: #ff85a2; /* pinkish red */
+  }
+  .message {
+    position: absolute;
+    top: 50%; /* center vertically */
+    left: 50%; /* center horizontally */
+    transform: translate(-50%, -50%);
+    font-family: 'Brush Script MT', cursive;
+    font-size: 30px;
+    color: black; /* black color */
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="envelope" onclick="showLetter()">
+  <div class="heart" onclick="closeLetter()">&hearts;</div>
+  <div class="message">To My Love</div>
+  <div class="letter" id="letter">
+    <div class="close" onclick="closeLetter()">&times;</div>
+    <p>To the girl of my dreams.<br>You truly light up my life.</p>
+    <p>This was supposed to be our one month gift, but its a bit delayed</p>
+    <p> You understand me like no one else,and you've shown me the true meaning of happiness. With you, I've found a love that's deeper than I ever imagined. </p>
+    <p>I'll be your shoulder to lean on and your strength when you need it most. i wont leave. ill be right here. </p>
+    <p> darling, i wont let anything happen to you. my precious pretty girl. my rajeha marri. </p>
+    <p> i love you so much. dont ever doubt it. </p>
+    <p>thro every scar n blood drop, every tear of both laughter n joy,i will be here. </p>
+    <p> im always yours. n that wont change. we're soul tied. its us in every universe. </p>
+    <p>I promise to always have your back, through the ups and downs. We've been through a lot, and every challenge just makes us stronger. You're not just my girlfriend; you're my partner, my best friend.</p>
+    <p>When you're feeling down, remember that I've got your back. Your smile means the world to me, and seeing you happy is what lights up my day.</p>
+    <p> you're always safe with me my love. thatll never change. ill always take care of you and your pretty lil laugh. the way you speak, the way you laugh, the way you walk n eat. everything about you makes my heart flutter.</p>
+    <p> you're it for me rajeha. no one makes me blush like you do. for you, i'd kill. id do things for you that i wouldnt have ever thought of. </p>
+    <p> no ones ever had me, not like you. </p>
+    <p>i love you. my pretty girl.</p>
+    <p> - Ms Marri. (Aka ur wife.) </p>
+  </div>
+  <div class="initials">RA</div>
+</div>
+
+<script>
+function showLetter() {
+  var letter = document.getElementById('letter');
+  letter.style.display = 'block';
+}
+
+function closeLetter() {
+  var letter = document.getElementById('letter');
+  letter.style.display = 'none';
+}
+</script>
+
+</body>
+</html>
